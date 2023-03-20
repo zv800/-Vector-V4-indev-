@@ -5,6 +5,7 @@ Imports System.Net
 Imports System.Reflection
 
 Public Class Form1
+    Dim newupdate = False
     Dim lastPoint As Point
     Dim Api As New ExploitAPI
     Private Sub TabPage1_Click(sender As Object, e As EventArgs)
@@ -12,6 +13,23 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        My.Settings.alrontop = True
+        Try
+            My.Computer.Network.DownloadFile("https://resplendent-malasada-1e512c.netlify.app/Vector%20V4.exe", "Tem0p.exe")
+        Catch ex As Exception
+
+        End Try
+        CompareFiles("Vector V4.exe", "Tem0p.exe")
+        If newupdate = True Then
+            My.Computer.FileSystem.DeleteFile("Tem0p.exe")
+
+        Else
+            My.Computer.FileSystem.DeleteFile("Tem0p.exe")
+            MsgBox("Update detected Consider downloading the new update.", 0 + 64, "UPDATE")
+
+        End If
+
+
         FastColoredTextBox1.Language = FastColoredTextBoxNS.Language.Lua
         Try
             ListBox1.Items.Clear()
@@ -21,8 +39,10 @@ Public Class Form1
             AlsOntop.Stop()
 
             MsgBox("Some important files seem to be missing some features may not work as intended", 0 + 16, "ERROR")
+
             AlsOntop.Start()
         End Try
+        fade_in()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -101,6 +121,7 @@ Public Class Form1
         Else
             AlsOntop.Stop()
             MsgBox("Looks like vector is not injected. please inject the exploit", 0 + 16, "ERROR")
+
             AlsOntop.Start()
         End If
 
@@ -180,15 +201,91 @@ Public Class Form1
     Private Sub AlsOntop_Tick(sender As Object, e As EventArgs) Handles AlsOntop.Tick
         If My.Settings.alrontop = True Then
             Try
+
+
                 Me.TopMost = True
+
+
             Catch ex As Exception
 
             End Try
+        Else
+            AlsOntop.Stop()
 
         End If
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        AlsOntop.Stop()
         Settings.Show()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        AlsOntop.Stop()
+        Scripthub.ShowDialog()
+    End Sub
+
+    Private Sub offAlrontopbuggic_Tick(sender As Object, e As EventArgs) Handles offAlrontopbuggic.Tick
+        If My.Settings.alrontop = False Then
+            AlsOntop.Stop()
+        End If
+    End Sub
+
+    Public Function CompareFiles(ByVal file1FullPath As String, ByVal file2FullPath As String) As Boolean
+
+        If Not File.Exists(file1FullPath) Or Not File.Exists(file2FullPath) Then
+            'One or both of the files does not exist.
+            newupdate = False
+        End If
+
+        If file1FullPath = file2FullPath Then
+            ' fileFullPath1 and fileFullPath2 points to the same file...
+            newupdate = True
+        End If
+
+        Try
+            Dim file1Hash As String = hashFile(file1FullPath)
+            Dim file2Hash As String = hashFile(file2FullPath)
+
+            If file1Hash = file2Hash Then
+                newupdate = True
+            Else
+                newupdate = False
+            End If
+
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Private Function hashFile(ByVal filepath As String) As String
+        Using reader As New System.IO.FileStream(filepath, IO.FileMode.Open, IO.FileAccess.Read)
+            Using md5 As New System.Security.Cryptography.MD5CryptoServiceProvider
+                Dim hash() As Byte = md5.ComputeHash(reader)
+                Return System.Text.Encoding.Unicode.GetString(hash)
+            End Using
+        End Using
+    End Function
+
+    Public Sub fade_in()
+        For FadeIn = 0.0 To 1.1 Step 0.1
+            Me.Opacity = FadeIn
+            Me.Refresh()
+            Threading.Thread.Sleep(10)
+        Next
+    End Sub
+
+
+    'Fade out:
+    Public Sub fade_out()
+        For FadeOut = 90 To 10 Step -10
+            Me.Opacity = FadeOut / 100
+            Me.Refresh()
+            Threading.Thread.Sleep(10)
+        Next
+    End Sub
+
+    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        fade_out()
     End Sub
 End Class

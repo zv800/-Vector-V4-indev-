@@ -23,13 +23,15 @@ Partial Class Settings
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Up_check = New System.Windows.Forms.CheckBox()
+        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,17 +46,16 @@ Partial Class Settings
         Me.Panel1.Size = New System.Drawing.Size(341, 44)
         Me.Panel1.TabIndex = 0
         '
-        'Button1
+        'Label2
         '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(266, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(44, 41)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "X"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(18, 17)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(113, 20)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "V - SETTINGS"
         '
         'Button2
         '
@@ -68,22 +69,24 @@ Partial Class Settings
         Me.Button2.Text = "-"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Label2
+        'Button1
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(18, 17)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(113, 20)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "V - SETTINGS"
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(266, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(44, 41)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "X"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Checked = True
         Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Enabled = False
         Me.CheckBox1.ForeColor = System.Drawing.Color.White
         Me.CheckBox1.Location = New System.Drawing.Point(12, 64)
         Me.CheckBox1.Name = "CheckBox1"
@@ -117,18 +120,40 @@ Partial Class Settings
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(9, 107)
+        Me.Label3.Location = New System.Drawing.Point(9, 118)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(199, 13)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "________________________________"
+        '
+        'Up_check
+        '
+        Me.Up_check.AutoSize = True
+        Me.Up_check.ForeColor = System.Drawing.Color.White
+        Me.Up_check.Location = New System.Drawing.Point(12, 110)
+        Me.Up_check.Name = "Up_check"
+        Me.Up_check.Size = New System.Drawing.Size(116, 17)
+        Me.Up_check.TabIndex = 6
+        Me.Up_check.Text = "Auto Update (WIP)"
+        Me.Up_check.UseVisualStyleBackColor = True
+        '
+        'MetroButton1
+        '
+        Me.MetroButton1.Location = New System.Drawing.Point(12, 145)
+        Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.Size = New System.Drawing.Size(279, 23)
+        Me.MetroButton1.TabIndex = 7
+        Me.MetroButton1.Text = "Update"
+        Me.MetroButton1.UseSelectable = True
         '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(303, 236)
+        Me.ClientSize = New System.Drawing.Size(303, 176)
+        Me.Controls.Add(Me.MetroButton1)
+        Me.Controls.Add(Me.Up_check)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.Label1)
@@ -136,6 +161,7 @@ Partial Class Settings
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Settings"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Settings"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -152,4 +178,6 @@ Partial Class Settings
     Friend WithEvents Label1 As Label
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents Up_check As CheckBox
+    Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
 End Class

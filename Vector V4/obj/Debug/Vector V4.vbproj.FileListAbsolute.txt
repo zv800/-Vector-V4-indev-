@@ -20,3 +20,26 @@ C:\Users\zack\source\repos\Vector V4\Vector V4\bin\Debug\MetroFramework.Fonts.dl
 C:\Users\zack\source\repos\Vector V4\Vector V4\obj\Debug\Vector_V4.Scripthub.resources
 C:\Users\zack\source\repos\Vector V4\Vector V4\obj\Debug\Vector_V4.Settings.resources
 C:\Users\zack\source\repos\Vector V4\Vector V4\obj\Debug\Vector_V4.Loading_Screen.resources
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\bin\Debug\Vector V4.exe.config
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\bin\Debug\Vector V4.exe
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\bin\Debug\Vector V4.pdb
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\bin\Debug\Vector V4.xml
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\bin\Debug\FastColoredTextBox.dll
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\bin\Debug\MetroFramework.Design.dll
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\bin\Debug\MetroFramework.dll
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\bin\Debug\Newtonsoft.Json.dll
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\bin\Debug\FastColoredTextBox.xml
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector V4.vbproj.AssemblyReference.cache
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector V4.vbproj.SuggestedBindingRedirects.cache
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector_V4.Form1.resources
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector_V4.Loading_Screen.resources
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector_V4.Resources.resources
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector_V4.Scripthub.resources
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector_V4.Settings.resources
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector V4.vbproj.GenerateResource.cache
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector V4.vbproj.CoreCompileInputs.cache
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector V4.vbproj.CopyComplete
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector V4.exe
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector V4.xml
+C:\Users\denve\Downloads\-Vector-V4-indev--main\-Vector-V4-indev--main\Vector V4\obj\Debug\Vector V4.pdb

@@ -55,6 +55,7 @@ Partial Class Form1
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AA = New System.Windows.Forms.Timer(Me.components)
         Me.AlsOntop = New System.Windows.Forms.Timer(Me.components)
+        Me.offAlrontopbuggic = New System.Windows.Forms.Timer(Me.components)
         Save_bw = New System.ComponentModel.BackgroundWorker()
         Me.Panel1.SuspendLayout()
         CType(Me.FastColoredTextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -152,7 +153,6 @@ Partial Class Form1
         Me.FastColoredTextBox1.CharWidth = 8
         Me.FastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.FastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.FastColoredTextBox1.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.FastColoredTextBox1.ForeColor = System.Drawing.Color.White
         Me.FastColoredTextBox1.IndentBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.FastColoredTextBox1.IsReplaceMode = False
@@ -344,7 +344,11 @@ Partial Class Form1
         'AlsOntop
         '
         Me.AlsOntop.Enabled = True
-        Me.AlsOntop.Interval = 1
+        Me.AlsOntop.Interval = 13
+        '
+        'offAlrontopbuggic
+        '
+        Me.offAlrontopbuggic.Interval = 1
         '
         'Form1
         '
@@ -368,6 +372,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " "
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -406,4 +411,5 @@ Partial Class Form1
     Friend WithEvents Timer1 As Timer
     Friend WithEvents AA As Timer
     Friend WithEvents AlsOntop As Timer
+    Friend WithEvents offAlrontopbuggic As Timer
 End Class
